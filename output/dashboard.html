@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="sq">
+<head>
+<meta charset="UTF-8">
+<title>Crypto Scanner Dashboard</title>
+<style>
+    body { font-family: -apple-system, sans-serif; background: #0f172a; color: #e2e8f0; margin: 0; padding: 24px; }
+    h1 { font-size: 24px; margin-bottom: 4px; }
+    .timestamp { color: #94a3b8; font-size: 14px; margin-bottom: 24px; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 16px; }
+    .coin-card { background: #1e293b; border-radius: 12px; padding: 16px; border: 1px solid #334155; }
+    .coin-header { display: flex; justify-content: space-between; align-items: start; margin-bottom: 4px; }
+    .coin-header h3 { margin: 0; font-size: 18px; }
+    .token-name { font-weight: normal; color: #94a3b8; font-size: 13px; }
+    .chain-badge { display: inline-block; background: #334155; padding: 2px 8px; border-radius: 6px; font-size: 11px; margin-top: 4px; }
+    .score-circle { width: 48px; height: 48px; border-radius: 50%; border: 3px solid; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 16px; }
+    .category-label { font-size: 13px; font-weight: bold; margin-bottom: 12px; }
+    .coin-stats { display: flex; gap: 16px; font-size: 13px; margin-bottom: 12px; color: #cbd5e1; }
+    .components { display: flex; flex-direction: column; gap: 6px; }
+    .component { display: grid; grid-template-columns: 130px 1fr 30px; align-items: center; gap: 8px; font-size: 12px; }
+    .bar { background: #334155; border-radius: 4px; height: 6px; overflow: hidden; }
+    .bar-fill { background: #60a5fa; height: 100%; }
+</style>
+</head>
+<body>
+    <h1>🔍 Crypto Scanner Dashboard</h1>
+    <div class="timestamp">Përditësuar: 2026-07-10 20:32 UTC · 30 rezultate (24 orët e fundit)</div>
+    <div class="grid">
+        
+    <div class="coin-card">
+        <div class="coin-header">
+            <div>
+                <h3>Json <span class="token-name">The Astronaut</span></h3>
+                <span class="chain-badge">solana</span>
+            </div>
+            <div class="score-circle" style="border-color:#eab308; color:#eab308">
+                43.6
+            </div>
+        </div>
+        <div class="category-label" style="color:#eab308">🟡 VËZHGIM</div>
+        <div class="coin-stats">
+            <div><strong>Likuiditet:</strong> $28,694</div>
+            <div><strong>Volum 24h:</strong> $421,234</div>
+        </div>
+        <div class="components"><div class="component"><span>Community</span><div class="bar"><div class="bar-fill" style="width:0%"></div></div><span>0</span></div><div class="component"><span>Volume Liquidity</span><div class="bar"><div class="bar-fill" style="width:72%"></div></div><span>72</span></div><div class="component"><span>Listing Potential</span><div class="bar"><div class="bar-fill" style="width:35%"></div></div><span>35</span></div><div class="component"><span>Dev Activity</span><div class="bar"><div class="bar-fill" style="width:55%"></div></div><span>55</span></div><div class="component"><span>Contract Safety</span><div class="bar"><div class="bar-fill" style="width:40%"></div></div><span>40</span></div><div class="component"><span>Risk</span><div class="bar"><div class="bar-fill" style="width:80%"></div></div><span>80</span></div></div>
+    </div>
+    
+    <div class="coin-card">
+        <div class="coin-header">
+            <div>
+                <h3>ピングー <span class="token-name">Pingu</span></h3>
+                <span class="chain-badge">solana</span>
+            </div>
+            <div class="score-circle" style="border-color:#ef4444; color:#ef4444">
+                35.9
+            </div>
+        </div>
+        <div class="category-label" style="color:#ef4444">🔴 RREZIK I LARTË / POTENCIAL I ULËT</div>
+        <div class="coin-stats">
+            <div><strong>Likuiditet:</strong> $19,287</div>
+            <div><strong>Volum 24h:</strong> $650,141</div>
+        </div>
+        <div class="components"><div class="component"><span>Community</span><div class="bar"><div class="bar-fill" style="width:0%"></div></div><span>0</span></div><div class="component"><span>Volume Liquidity</span><div class="bar"><div class="bar-fill" style="width:52%"></div></div><span>52</span></div><div class="component"><span>Listing Potential</span><div class="bar"><div class="bar-fill" style="width:35%"></div></div><span>35</span></div><div class="component"><span>Dev Activity</span><div class="bar"><div class="bar-fill" style="width:40%"></div></div><span>40</span></div><div class="component"><span>Contract Safety</span><div class="bar"><div class="bar-fill" style="width:40%"></div></div><span>40</span></div><div class="component"><span>Risk</span><div class="bar"><div class="bar-fill" style="width:65%"></div></div><span>65</span></div></div>
+    </div>
+    
+    <div class="coin-card">
+        <div class="coin-header">
+            <div>
+                <h3>MOGTROLL <span class="token-name">Mog Troll</span></h3>
+                <span class="chain-badge">solana</span>
+            </div>
+            <div class="score-circle" style="border-color:#ef4444; color:#ef4444">
+                32.4
+            </div>
+        </div>
+        <div class="category-label" style="color:#ef4444">🔴 RREZIK I LARTË / POTENCIAL I ULËT</div>
+        <div class="coin-stats">
+            <div><strong>Likuiditet:</strong> $26,263</div>
+            <div><strong>Volum 24h:</strong> $575,585</div>
+        </div>
+        <div class="components"><div class="component"><span>Community</span><div class="bar"><div class="bar-fill" style="width:0%"></div></div><span>0</span></div><div class="component"><span>Volume Liquidity</span><div class="bar"><div class="bar-fill" style="width:42%"></div></div><span>42</span></div><div class="component"><span>Listing Potential</span><div class="bar"><div class="bar-fill" style="width:35%"></div></div><span>35</span></div><div class="component"><span>Dev Activity</span><div class="bar"><div class="bar-fill" style="width:20%"></div></div><span>20</span></div><div class="component"><span>Contract Safety</span><div class="bar"><div class="bar-fill" style="width:40%"></div></div><span>40</span></div><div class="component"><span>Risk</span><div class="bar"><div class="bar-fill" style="width:80%"></div></div><span>80</span></div></div>
+    </div>
+    
+    <div class="coin-card">
+        <div class="coin-header">
+            <div>
+                <h3>bullishsol <span class="token-name">mysteriously bullish sol</span></h3>
+                <span class="chain-badge">solana</span>
+            </div>
+            <div class="score-circle" style="border-color:#ef4444; color:#ef4444">
+                30.4
+            </div>
+        </div>
+        <div class="category-label" style="color:#ef4444">🔴 RREZIK I LARTË / POTENCIAL I ULËT</div>
+        <div class="coin-stats">
+            <div><strong>Likuiditet:</strong> $41,808</div>
+            <div><strong>Volum 24h:</strong> $469,721</div>
+        </div>
+        <div class="components"><div class="component"><span>Community</span><div class="bar"><div class="bar-fill" style="width:0%"></div></div><span>0</span></div><div class="component"><span>Volume Liquidity</span><div class="bar"><div class="bar-fill" style="width:42%"></div></div><span>42</span></div><div class="component"><span>Listing Potential</span><div class="bar"><div class="bar-fill" style="width:35%"></div></div><span>35</span></div><div class="component"><span>Dev Activity</span><div class="bar"><div class="bar-fill" style="width:20%"></div></div><span>20</span></div><div class="component"><span>Contract Safety</span><div class="bar"><div class="bar-fill" style="width:40%"></div></div><span>40</span></div><div class="component"><span>Risk</span><div class="bar"><div class="bar-fill" style="width:60%"></div></div><span>60</span></div></div>
+    </div>
+    
+    <div class="coin-card">
+        <div class="coin-header">
+            <div>
+                <h3>CRYPTODOG <span class="token-name">Crypto Dog</span></h3>
+                <span class="chain-badge">solana</span>
+            </div>
+            <div class="score-circle" style="border-color:#ef4444; color:#ef4444">
+                27.3
+            </div>
+        </div>
+        <div class="category-label" style="color:#ef4444">🔴 RREZIK I LARTË / POTENCIAL I ULËT</div>
+        <div class="coin-stats">
+            <div><strong>Likuiditet:</strong> $14,756</div>
+            <div><strong>Volum 24h:</strong> $27,467</div>
+        </div>
+        <div class="components"><div class="component"><span>Community</span><div class="bar"><div class="bar-fill" style="width:0%"></div></div><span>0</span></div><div class="component"><span>Volume Liquidity</span><div class="bar"><div class="bar-fill" style="width:30%"></div></div><span>30</span></div><div class="component"><span>Listing Potential</span><div class="bar"><div class="bar-fill" style="width:35%"></div></div><span>35</span></div><div class="component"><span>Dev Activity</span><div class="bar"><div class="bar-fill" style="width:12%"></div></div><span>12</span></div><div class="component"><span>Contract Safety</span><div class="bar"><div class="bar-fill" style="width:40%"></div></div><span>40</span></div><div class="component"><span>Risk</span><div class="bar"><div class="bar-fill" style="width:65%"></div></div><span>65</span></div></div>
+    </div>
+    
+    <div class="coin-card">
+        <div class="coin-header">
+            <div>
+                <h3>TRENCHERS <span class="token-name">Trenchers</span></h3>
+                <span class="chain-badge">solana</span>
+            </div>
+            <div class="score-circle" style="border-color:#ef4444; color:#ef4444">
+                25.5
+            </div>
+        </div>
+        <div class="category-label" style="color:#ef4444">🔴 RREZIK I LARTË / POTENCIAL I ULËT</div>
+        <div class="coin-stats">
+            <div><strong>Likuiditet:</strong> $13,586</div>
+            <div><strong>Volum 24h:</strong> $32,778</div>
+        </div>
+        <div class="components"><div class="component"><span>Community</span><div class="bar"><div class="bar-fill" style="width:0%"></div></div><span>0</span></div><div class="component"><span>Volume Liquidity</span><div class="bar"><div class="bar-fill" style="width:30%"></div></div><span>30</span></div><div class="component"><span>Listing Potential</span><div class="bar"><div class="bar-fill" style="width:35%"></div></div><span>35</span></div><div class="component"><span>Dev Activity</span><div class="bar"><div class="bar-fill" style="width:0%"></div></div><span>0</span></div><div class="component"><span>Contract Safety</span><div class="bar"><div class="bar-fill" style="width:40%"></div></div><span>40</span></div><div class="component"><span>Risk</span><div class="bar"><div class="bar-fill" style="width:65%"></div></div><span>65</span></div></div>
+    </div>
+    
+    <div class="coin-card">
+        <div class="coin-header">
+            <div>
+                <h3>FKB <span class="token-name">Flying Ketamine Bull</span></h3>
+                <span class="chain-badge">solana</span>
+            </div>
+            <div class="score-circle" style="border-color:#ef4444; color:#ef4444">
+                0.0
+            </div>
+        </div>
+        <div class="category-label" style="color:#ef4444">❌ REFUZUAR (Faza 1)</div>
+        <div class="coin-stats">
+            <div><strong>Likuiditet:</strong> $0</div>
+            <div><strong>Volum 24h:</strong> $33,699</div>
+        </div>
+        <div class="components"></div>
+    </div>
+    
+    <div class="coin-card">
+        <div class="coin-header">
+            <div>
+                <h3>MOG <span class="token-name">Mog Glasses </span></h3>
+                <span class="chain-badge">solana</span>
+            </div>
+            <div class="score-circle" style="border-color:#ef4444; color:#ef4444">
+                0.0
+            </div>
+        </div>
+        <div class="category-label" style="color:#ef4444">❌ REFUZUAR (Faza 1)</div>
+        <div class="coin-stats">
+            <div><strong>Likuiditet:</strong> $0</div>
+            <div><strong>Volum 24h:</strong> $82,627</div>
+        </div>
+        <div class="components"></div>
+    </div>
+    
+    <div class="coin-card">
+        <div class="coin-header">
+            <div>
+                <h3>MOGFATHER <span class="token-name">The Mog Father</span></h3>
+                <span class="chain-badge">solana</span>
+            </div>
+            <div class="score-circle" style="border-color:#ef4444; color:#ef4444">
+                0.0
+            </div>
+        </div>
+        <div class="category-label" style="color:#ef4444">❌ REFUZUAR (Faza 1)</div>
+        <div class="coin-stats">
+            <div><strong>Likuiditet:</strong> $0</div>
+            <div><strong>Volum 24h:</strong> $98,887</div>
+        </div>
+        <div class="components"></div>
+    </div>
+    
+    <div class="coin-card">
+        <div class="coin-header">
+            <div>
+                <h3>MAD <span class="token-name">The MAD Bull</span></h3>
+                <span class="chain-badge">solana</span>
+            </div>
+            <div class="score-circle" style="border-color:#ef4444; color:#ef4444">
+                0.0
+            </div>
+        </div>
+        <div class="category-label" style="color:#ef4444">❌ REFUZUAR (Faza 1)</div>
+        <div class="coin-stats">
+            <div><strong>Likuiditet:</strong> $0</div>
+            <div><strong>Volum 24h:</strong> $10,183</div>
+        </div>
+        <div class="components"></div>
+    </div>
+    
+    <div class="coin-card">
+        <div class="coin-header">
+            <div>
+                <h3>COM <span class="token-name">Cult of Mog</span></h3>
+                <span class="chain-badge">solana</span>
+            </div>
+            <div class="score-circle" style="border-color:#ef4444; color:#ef4444">
+                0.0
+            </div>
+        </div>
+        <div class="category-label" style="color:#ef4444">❌ REFUZUAR (Faza 1)</div>
+        <div class="coin-stats">
+            <div><strong>Likuiditet:</strong> $0</div>
+            <div><strong>Volum 24h:</strong> $79,004</div>
+        </div>
+        <div class="components"></div>
+    </div>
+    
+    <div class="coin-card">
+        <div class="coin-header">
+            <div>
+                <h3>MOGCOIN <span class="token-name">MOGCOIN</span></h3>
+                <span class="chain-badge">solana</span>
+            </div>
+            <div class="score-circle" style="border-color:#ef4444; color:#ef4444">
+                0.0
+            </div>
+        </div>
+        <div class="category-label" style="color:#ef4444">❌ REFUZUAR (Faza 1)</div>
+        <div class="coin-stats">
+            <div><strong>Likuiditet:</strong> $6,879</div>
+            <div><strong>Volum 24h:</strong> $71,323</div>
+        </div>
+        <div class="components"></div>
+    </div>
+    
+    <div class="coin-card">
+        <div class="coin-header">
+            <div>
+                <h3>CASHCOW <span class="token-name">CASH COW</span></h3>
+                <span class="chain-badge">solana</span>
+            </div>
+            <div class="score-circle" style="border-color:#ef4444; color:#ef4444">
+                0.0
+            </div>
+        </div>
+        <div class="category-label" style="color:#ef4444">❌ REFUZUAR (Faza 1)</div>
+        <div class="coin-stats">
+            <div><strong>Likuiditet:</strong> $0</div>
+            <div><strong>Volum 24h:</strong> $59,345</div>
+        </div>
+        <div class="components"></div>
+    </div>
+    
+    <div class="coin-card">
+        <div class="coin-header">
+            <div>
+                <h3>POPALON <span class="token-name">Popalon</span></h3>
+                <span class="chain-badge">solana</span>
+            </div>
+            <div class="score-circle" style="border-color:#ef4444; color:#ef4444">
+                0.0
+            </div>
+        </div>
+        <div class="category-label" style="color:#ef4444">❌ REFUZUAR (Faza 1)</div>
+        <div class="coin-stats">
+            <div><strong>Likuiditet:</strong> $4,085</div>
+            <div><strong>Volum 24h:</strong> $103,841</div>
+        </div>
+        <div class="components"></div>
+    </div>
+    
+    <div class="coin-card">
+        <div class="coin-header">
+            <div>
+                <h3>BULLBALL <span class="token-name">Bull Ball</span></h3>
+                <span class="chain-badge">solana</span>
+            </div>
+            <div class="score-circle" style="border-color:#ef4444; color:#ef4444">
+                0.0
+            </div>
+        </div>
+        <div class="category-label" style="color:#ef4444">❌ REFUZUAR (Faza 1)</div>
+        <div class="coin-stats">
+            <div><strong>Likuiditet:</strong> $0</div>
+            <div><strong>Volum 24h:</strong> $13,873</div>
+        </div>
+        <div class="components"></div>
+    </div>
+    
+    <div class="coin-card">
+        <div class="coin-header">
+            <div>
+                <h3>BUSHMAN <span class="token-name">Bushman</span></h3>
+                <span class="chain-badge">solana</span>
+            </div>
+            <div class="score-circle" style="border-color:#ef4444; color:#ef4444">
+                0.0
+            </div>
+        </div>
+        <div class="category-label" style="color:#ef4444">❌ REFUZUAR (Faza 1)</div>
+        <div class="coin-stats">
+            <div><strong>Likuiditet:</strong> $0</div>
+            <div><strong>Volum 24h:</strong> $3,098</div>
+        </div>
+        <div class="components"></div>
+    </div>
+    
+    <div class="coin-card">
+        <div class="coin-header">
+            <div>
+                <h3>CINNA <span class="token-name">Cinnamoroll</span></h3>
+                <span class="chain-badge">solana</span>
+            </div>
+            <div class="score-circle" style="border-color:#ef4444; color:#ef4444">
+                0.0
+            </div>
+        </div>
+        <div class="category-label" style="color:#ef4444">❌ REFUZUAR (Faza 1)</div>
+        <div class="coin-stats">
+            <div><strong>Likuiditet:</strong> $0</div>
+            <div><strong>Volum 24h:</strong> $65,555</div>
+        </div>
+        <div class="components"></div>
+    </div>
+    
+    <div class="coin-card">
+        <div class="coin-header">
+            <div>
+                <h3>MOGE <span class="token-name">Moge</span></h3>
+                <span class="chain-badge">solana</span>
+            </div>
+            <div class="score-circle" style="border-color:#ef4444; color:#ef4444">
+                0.0
+            </div>
+        </div>
+        <div class="category-label" style="color:#ef4444">❌ REFUZUAR (Faza 1)</div>
+        <div class="coin-stats">
+            <div><strong>Likuiditet:</strong> $0</div>
+            <div><strong>Volum 24h:</strong> $46,953</div>
+        </div>
+        <div class="components"></div>
+    </div>
+    
+    <div class="coin-card">
+        <div class="coin-header">
+            <div>
+                <h3>CRYPTODOG <span class="token-name">Crypto Dog</span></h3>
+                <span class="chain-badge">solana</span>
+            </div>
+            <div class="score-circle" style="border-color:#ef4444; color:#ef4444">
+                0.0
+            </div>
+        </div>
+        <div class="category-label" style="color:#ef4444">❌ REFUZUAR (Faza 1)</div>
+        <div class="coin-stats">
+            <div><strong>Likuiditet:</strong> $0</div>
+            <div><strong>Volum 24h:</strong> $42,649</div>
+        </div>
+        <div class="components"></div>
+    </div>
+    
+    <div class="coin-card">
+        <div class="coin-header">
+            <div>
+                <h3>MEMEHOOD <span class="token-name">memehood</span></h3>
+                <span class="chain-badge">solana</span>
+            </div>
+            <div class="score-circle" style="border-color:#ef4444; color:#ef4444">
+                0.0
+            </div>
+        </div>
+        <div class="category-label" style="color:#ef4444">❌ REFUZUAR (Faza 1)</div>
+        <div class="coin-stats">
+            <div><strong>Likuiditet:</strong> $0</div>
+            <div><strong>Volum 24h:</strong> $54,268</div>
+        </div>
+        <div class="components"></div>
+    </div>
+    
+    <div class="coin-card">
+        <div class="coin-header">
+            <div>
+                <h3>D <span class="token-name">D</span></h3>
+                <span class="chain-badge">solana</span>
+            </div>
+            <div class="score-circle" style="border-color:#ef4444; color:#ef4444">
+                0.0
+            </div>
+        </div>
+        <div class="category-label" style="color:#ef4444">❌ REFUZUAR (Faza 1)</div>
+        <div class="coin-stats">
+            <div><strong>Likuiditet:</strong> $0</div>
+            <div><strong>Volum 24h:</strong> $55,608</div>
+        </div>
+        <div class="components"></div>
+    </div>
+    
+    <div class="coin-card">
+        <div class="coin-header">
+            <div>
+                <h3>PORK <span class="token-name">KIM PORK UN</span></h3>
+                <span class="chain-badge">solana</span>
+            </div>
+            <div class="score-circle" style="border-color:#ef4444; color:#ef4444">
+                0.0
+            </div>
+        </div>
+        <div class="category-label" style="color:#ef4444">❌ REFUZUAR (Faza 1)</div>
+        <div class="coin-stats">
+            <div><strong>Likuiditet:</strong> $0</div>
+            <div><strong>Volum 24h:</strong> $17,538</div>
+        </div>
+        <div class="components"></div>
+    </div>
+    
+    <div class="coin-card">
+        <div class="coin-header">
+            <div>
+                <h3>NOTHING <span class="token-name">BLIND FAITH</span></h3>
+                <span class="chain-badge">solana</span>
+            </div>
+            <div class="score-circle" style="border-color:#ef4444; color:#ef4444">
+                0.0
+            </div>
+        </div>
+        <div class="category-label" style="color:#ef4444">❌ REFUZUAR (Faza 1)</div>
+        <div class="coin-stats">
+            <div><strong>Likuiditet:</strong> $0</div>
+            <div><strong>Volum 24h:</strong> $30,669</div>
+        </div>
+        <div class="components"></div>
+    </div>
+    
+    <div class="coin-card">
+        <div class="coin-header">
+            <div>
+                <h3>RWA <span class="token-name">Retards With Autism</span></h3>
+                <span class="chain-badge">solana</span>
+            </div>
+            <div class="score-circle" style="border-color:#ef4444; color:#ef4444">
+                0.0
+            </div>
+        </div>
+        <div class="category-label" style="color:#ef4444">❌ REFUZUAR (Faza 1)</div>
+        <div class="coin-stats">
+            <div><strong>Likuiditet:</strong> $0</div>
+            <div><strong>Volum 24h:</strong> $53,427</div>
+        </div>
+        <div class="components"></div>
+    </div>
+    
+    <div class="coin-card">
+        <div class="coin-header">
+            <div>
+                <h3>MOGGUY <span class="token-name">Mog Guy</span></h3>
+                <span class="chain-badge">solana</span>
+            </div>
+            <div class="score-circle" style="border-color:#ef4444; color:#ef4444">
+                0.0
+            </div>
+        </div>
+        <div class="category-label" style="color:#ef4444">❌ REFUZUAR (Faza 1)</div>
+        <div class="coin-stats">
+            <div><strong>Likuiditet:</strong> $9,142</div>
+            <div><strong>Volum 24h:</strong> $66,595</div>
+        </div>
+        <div class="components"></div>
+    </div>
+    
+    <div class="coin-card">
+        <div class="coin-header">
+            <div>
+                <h3>$GRANDPA <span class="token-name">Grandpa Hodl</span></h3>
+                <span class="chain-badge">solana</span>
+            </div>
+            <div class="score-circle" style="border-color:#ef4444; color:#ef4444">
+                0.0
+            </div>
+        </div>
+        <div class="category-label" style="color:#ef4444">❌ REFUZUAR (Faza 1)</div>
+        <div class="coin-stats">
+            <div><strong>Likuiditet:</strong> $26,583</div>
+            <div><strong>Volum 24h:</strong> $68,631</div>
+        </div>
+        <div class="components"></div>
+    </div>
+    
+    <div class="coin-card">
+        <div class="coin-header">
+            <div>
+                <h3>DEADWIRE <span class="token-name">DEADWIRE</span></h3>
+                <span class="chain-badge">solana</span>
+            </div>
+            <div class="score-circle" style="border-color:#ef4444; color:#ef4444">
+                0.0
+            </div>
+        </div>
+        <div class="category-label" style="color:#ef4444">❌ REFUZUAR (Faza 1)</div>
+        <div class="coin-stats">
+            <div><strong>Likuiditet:</strong> $0</div>
+            <div><strong>Volum 24h:</strong> $24,406</div>
+        </div>
+        <div class="components"></div>
+    </div>
+    
+    <div class="coin-card">
+        <div class="coin-header">
+            <div>
+                <h3>mogcash <span class="token-name">mogcash</span></h3>
+                <span class="chain-badge">solana</span>
+            </div>
+            <div class="score-circle" style="border-color:#ef4444; color:#ef4444">
+                0.0
+            </div>
+        </div>
+        <div class="category-label" style="color:#ef4444">❌ REFUZUAR (Faza 1)</div>
+        <div class="coin-stats">
+            <div><strong>Likuiditet:</strong> $0</div>
+            <div><strong>Volum 24h:</strong> $44,480</div>
+        </div>
+        <div class="components"></div>
+    </div>
+    
+    <div class="coin-card">
+        <div class="coin-header">
+            <div>
+                <h3>Hood <span class="token-name">Rubbinhud</span></h3>
+                <span class="chain-badge">solana</span>
+            </div>
+            <div class="score-circle" style="border-color:#ef4444; color:#ef4444">
+                0.0
+            </div>
+        </div>
+        <div class="category-label" style="color:#ef4444">❌ REFUZUAR (Faza 1)</div>
+        <div class="coin-stats">
+            <div><strong>Likuiditet:</strong> $0</div>
+            <div><strong>Volum 24h:</strong> $15,387</div>
+        </div>
+        <div class="components"></div>
+    </div>
+    
+    <div class="coin-card">
+        <div class="coin-header">
+            <div>
+                <h3>bog <span class="token-name">The Mog Bull</span></h3>
+                <span class="chain-badge">solana</span>
+            </div>
+            <div class="score-circle" style="border-color:#ef4444; color:#ef4444">
+                0.0
+            </div>
+        </div>
+        <div class="category-label" style="color:#ef4444">❌ REFUZUAR (Faza 1)</div>
+        <div class="coin-stats">
+            <div><strong>Likuiditet:</strong> $60,647</div>
+            <div><strong>Volum 24h:</strong> $1,497,888</div>
+        </div>
+        <div class="components"></div>
+    </div>
+    
+    </div>
+</body>
+</html>
