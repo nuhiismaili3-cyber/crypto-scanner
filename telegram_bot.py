@@ -3,6 +3,7 @@ Njoftime Telegram - dërgon alarme kur gjendet coin me piketë të lartë.
 Kërkon: bot token nga @BotFather + chat_id (grup ose bisedë personale).
 """
 
+import html
 import logging
 import requests
 
@@ -37,11 +38,13 @@ def format_coin_alert(result):
     """Formaton mesazhin e njoftimit sipas kërkesës origjinale:
     emri, arsyet e piketës, rreziqet, burimet."""
 
+    esc = html.escape
+
     lines = [
-        f"🔍 <b>{result['token_symbol']}</b> ({result['token_name']})",
-        f"Kategoria: <b>{result['category']}</b>",
+        f"🔍 <b>{esc(str(result['token_symbol']))}</b> ({esc(str(result['token_name']))})",
+        f"Kategoria: <b>{esc(str(result['category']))}</b>",
         f"Piketë: <b>{result['final_score']}/100</b>",
-        f"Momentum: {result.get('momentum', 'N/A')}",
+        f"Momentum: {esc(str(result.get('momentum', 'N/A')))}",
         "",
         "<b>Pse mori këtë piketë:</b>",
     ]
@@ -62,17 +65,17 @@ def format_coin_alert(result):
         lines.append("")
         lines.append("<b>⚠️ Flamuj Risku:</b>")
         for flag in result["risk_flags"]:
-            lines.append(f"  • {flag}")
+            lines.append(f"  • {esc(str(flag))}")
 
     lines.append("")
-    lines.append(f"Blockchain: {result['chain']} | Likuiditet: ${result['liquidity_usd']:,.0f}")
-    lines.append(f"🔗 <a href='{result.get('dex_url', '#')}'>Shiko në DEX Screener</a>")
+    lines.append(f"Blockchain: {esc(str(result['chain']))} | Likuiditet: ${result['liquidity_usd']:,.0f}")
+    lines.append(f"🔗 <a href=\"{esc(str(result.get('dex_url', '#')))}\">Shiko në DEX Screener</a>")
 
     if result.get("rss_mentions"):
         lines.append("")
         lines.append("<b>📰 Përmendur në njoftime exchange:</b>")
         for mention in result["rss_mentions"]:
-            lines.append(f"  • {mention['exchange']}: {mention['title']}")
+            lines.append(f"  • {esc(str(mention['exchange']))}: {esc(str(mention['title']))}")
 
     return "\n".join(lines)
 
